@@ -1,7 +1,7 @@
 {
   "name": "@helpful-hooks/use-bool",
-  "version": "1.0.1",
-  "description": "Helpful React hooks for storing boolean state",
+  "version": "1.0.2",
+  "description": "Helpful React hook for storing boolean state",
   "main": "index.ts",
   "scripts": {
     "build": "rollup -c",
@@ -11,8 +11,12 @@
     "test": "jest",
     "test:watch": "jest --watch"
   },
-  "author": "taennan",
+  "author": "taennan <taennan.dev@protonmail.com>",
   "license": "MIT",
+  "repository": {
+    "url": "https://github.com/taennan/use-bool.git",
+    "type": "git"
+  },
   "type": "module",
   "files": ["dist"],
   "types": "dist/index.d.ts",

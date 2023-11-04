@@ -2,6 +2,13 @@
 
 A simple React hook for storing `boolean` state
 
+## Contents
+
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [Licence](#licence)
+
 ## Installation
 
 If using `yarn`
@@ -75,8 +82,10 @@ const [state, stateHandlers] = useBool(
 
 ## Contributing
 
-All contributions are welcome! If you find a bug or have a feature request, open an issue in a Github Repo.
+All contributions are welcome! If you find a bug or have a feature request, open an issue in the [Github Repo](github-repo).
 
 ## Licence
 
 This package uses an MIT licence
+
+[github-repo](https://github.com/taennan/use-bool.git)
