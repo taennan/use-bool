@@ -12,7 +12,7 @@ export function useBool(initialState = false, callbacks?: UseBoolCallbacks): Use
   const set: UseBoolHandlers['set'] = useCallback((args) => {
     setState((prev) => {
       const newValue = typeof args === 'function' ? args(prev) : args
-      runCallback(newValue)
+      if (newValue !== prev) runCallback(newValue)
       return newValue
     })
   }, [runCallback])
@@ -27,7 +27,7 @@ export function useBool(initialState = false, callbacks?: UseBoolCallbacks): Use
 
   const toggle = useCallback(() => {
     state ? off() : on()
-  }, [on, off, state])
+  }, [state, on, off])
 
   return [state, { on, off, toggle, set }]
 }
