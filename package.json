@@ -1,8 +1,8 @@
 {
   "name": "@helpful-hooks/use-bool",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Helpful React hook for storing boolean state",
-  "main": "index.ts",
+  "main": "./dist/index.js",
   "scripts": {
     "build": "rollup -c",
     "start": "rollup -c -w",
@@ -17,6 +17,15 @@
     "url": "https://github.com/taennan/use-bool.git",
     "type": "git"
   },
+  "keywords": [
+    "react",
+    "hook",
+    "next",
+    "nextjs",
+    "components",
+    "library",
+    "frontend"
+  ],
   "type": "module",
   "files": ["dist"],
   "types": "dist/index.d.ts",
