@@ -1,6 +1,6 @@
 {
   "name": "@helpful-hooks/use-bool",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Helpful React hook for storing boolean state",
   "main": "./dist/index.js",
   "scripts": {
