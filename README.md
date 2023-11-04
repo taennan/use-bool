@@ -66,8 +66,6 @@ const [state] = useBool(true)
 
 This hook also supports callbacks which are run when a change in state is made
 
-It must be noted that the callbacks will not be run if state is changed with the `set` function. Only `on`, `off` and `toggle` will run these callbacks
-
 ```ts
 const onTurnedOff = () => console.log('state === false')
 const onTurnedOn = () => console.log('state === true')
@@ -82,10 +80,10 @@ const [state, stateHandlers] = useBool(
 
 ## Contributing
 
-All contributions are welcome! If you find a bug or have a feature request, open an issue in the [Github Repo](github-repo).
+All contributions are welcome! If you find a bug or have a feature request, open an issue in the [Github Repo](github-repo)
 
 ## Licence
 
-This package uses an MIT licence
+This package uses the MIT licence. Use or modify it in any morally correct way you choose
 
-[github-repo](https://github.com/taennan/use-bool.git)
+[github-repo]: https://github.com/taennan/use-bool.git
