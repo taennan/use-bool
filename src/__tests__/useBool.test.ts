@@ -28,7 +28,7 @@ describe('useBool', () => {
 
   it('sets state to false when off handler is called', () => {
     const { result } = renderHook(() => useBool(true))
-    
+
     act(() => result.current[1].off())
     expect(result.current[0]).toBe(false)
 
@@ -54,7 +54,6 @@ describe('useBool', () => {
 
     act(() => result.current[1].set(true))
     expect(result.current[0]).toBe(true)
-
   })
 
   it('runs onTurnedOn when on handler is called', () => {

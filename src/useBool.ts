@@ -5,17 +5,23 @@ export function useBool(initialState = false, callbacks?: UseBoolCallbacks): Use
   const { onTurnedOn, onTurnedOff } = callbacks || {}
   const [state, setState] = useState(initialState)
 
-  const runCallback = useCallback((bool: boolean) => {
-    bool ? onTurnedOn?.() : onTurnedOff?.()
-  }, [onTurnedOn, onTurnedOff])
+  const runCallback = useCallback(
+    (bool: boolean) => {
+      bool ? onTurnedOn?.() : onTurnedOff?.()
+    },
+    [onTurnedOn, onTurnedOff],
+  )
 
-  const set: UseBoolHandlers['set'] = useCallback((args) => {
-    setState((prev) => {
-      const newValue = typeof args === 'function' ? args(prev) : args
-      if (newValue !== prev) runCallback(newValue)
-      return newValue
-    })
-  }, [runCallback])
+  const set: UseBoolHandlers['set'] = useCallback(
+    (args) => {
+      setState((prev) => {
+        const newValue = typeof args === 'function' ? args(prev) : args
+        if (newValue !== prev) runCallback(newValue)
+        return newValue
+      })
+    },
+    [runCallback],
+  )
 
   const on = useCallback(() => {
     set(true)
